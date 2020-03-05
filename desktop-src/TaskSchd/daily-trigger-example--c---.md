@@ -169,7 +169,7 @@ int __cdecl wmain()
         return 1;
     }
     
-    hr = pRegInfo->put_Author( L"Author Name" );
+    hr = pRegInfo->put_Author( _bstr_t(L"Author Name") );
     pRegInfo->Release();  // COM clean up.  Pointer is no longer used.
     if( FAILED(hr) )
     {
